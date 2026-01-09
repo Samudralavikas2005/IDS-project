@@ -1,0 +1,17 @@
+MULTI-THREADING ARCHITECTURE:
+┌─────────────────────────────────────────────────────────────────┐
+│                    THREAD MANAGEMENT                            │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│   MAIN THREAD   │   WORKER        │   BACKGROUND                │
+│                 │   THREADS       │   THREADS                   │
+├─────────────────┼─────────────────┼─────────────────────────────┤
+│ • User Input    │ • Packet        │ • Real-time Display         │
+│ • Menu Control  │   Processing    │ • Alert Monitoring          │
+│ • File I/O      │ • Statistics    │ • Protocol Diversity        │
+│ • Coordination  │   Aggregation   │   Checks                    │
+│ • Error Handling│ • ML Analysis   │ • Buffer Management         │
+│                 │ • Visualization │ • Resource Cleanup          │
+│                 │   Rendering     │                             │
+└─────────────────┴─────────────────┴─────────────────────────────┘
+
+

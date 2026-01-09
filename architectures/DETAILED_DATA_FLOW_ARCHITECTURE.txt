@@ -1,0 +1,39 @@
+
+PCAP ANALYSIS PATH:
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│   PCAP      │ →  │  PACKET      │ →  │  MULTI-THREADED │
+│   FILE      │    │  CAPTURE     │    │   PROCESSING    │
+│   INPUT     │    │  (PyShark)   │    │    ENGINE       │
+└─────────────┘    └──────────────┘    └─────────────────┘
+                                                   ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    PARALLEL PROCESSING                         │
+│  ┌─────────────┐  ┌──────────────┐  ┌─────────────────────┐    │
+│  │  IP/Port    │  │  Protocol    │  │   Packet Metadata   │    │
+│  │  Counter    │  │  Identifier  │  │   Extractor         │    │
+│  │  Thread     │  │  Thread      │  │   Thread           │    │
+│  └─────────────┘  └──────────────┘  └─────────────────────┘    │
+└─────────────────────────────────────────────────────────────────┘
+                                                   ↓
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│  STATS      │ →  │   ML &       │ → │   ALERT        │
+│ AGGREGATION │    │  SECURITY    │    │   GENERATION    │
+│             │    │  ANALYSIS    │    │                 │
+└─────────────┘    └──────────────┘    └─────────────────┘
+
+
+REAL-TIME MONITORING PATH:
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│  NETWORK    │ →  │  LIVE        │ →  │  BACKGROUND     │
+│ INTERFACE   │    │  CAPTURE     │    │   THREADS       │
+│ (eth0/wlan0)│    │  (PyShark)   │    │                 │
+└─────────────┘    └──────────────┘    └─────────────────┘
+                                      ↓               ↓               ↓
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│ DISPLAY     │    │  ALERT       │    │  PROTOCOL       │
+│ UPDATE      │    │  CHECKING    │    │  DIVERSITY      │
+│ THREAD      │    │  THREAD      │    │  MONITOR        │
+│ (every 2s)  │    │ (every 5s)   │    │ (every 10s)     │
+└─────────────┘    └──────────────┘    └─────────────────┘
+
+

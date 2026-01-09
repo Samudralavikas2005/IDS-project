@@ -1,0 +1,18 @@
+PROTOCOL AWARE DETECTION:
+┌─────────────────────────────────────────────────────────────────┐
+│                    PROTOCOL INTELLIGENCE LAYER                  │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│  HIGH-RISK      │   SUSPICIOUS    │   ENCRYPTED                 │
+│  PROTOCOLS      │   PATTERNS      │   TRAFFIC                   │
+│                 │                 │   ANALYSIS                  │
+├─────────────────┼─────────────────┼─────────────────────────────┤
+│ • DCERPC        │ • Protocol      │ • TLS Handshake             │
+│   (Lateral      │   Monoculture   │   Analysis                  │
+│   Movement)     │ • Low Entropy   │ • Certificate               │
+│ • SMB (File     │   Patterns      │   Inspection                │
+│   Sharing)      │ • Unusual Port  │ • SNI Extraction            │
+│ • RDP (Remote   │   Usage         │ • Cipher Suite              │
+│   Access)       │ • Beaconing     │   Analysis                  │
+│ • SSH (Brute    │   Behavior      │                             │
+│   Force)        │                 │                             │
+└─────────────────┴─────────────────┴─────────────────────────────┘

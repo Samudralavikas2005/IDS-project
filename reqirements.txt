@@ -1,0 +1,16 @@
+# Core analysis
+pyshark==0.6
+fpdf2==2.7.4
+geoip2==4.6.0
+PyPDF2==3.0.1
+psutil==5.9.5
+
+# Visualization (install these first with --only-binary)
+plotly==5.14.1
+seaborn==0.12.2
+
+# ML & Data (install with --only-binary)
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.0
+matplotlib==3.7.1

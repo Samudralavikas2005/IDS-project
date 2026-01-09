@@ -1,0 +1,33 @@
+
+DATA PROCESSING PIPELINE:
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│   RAW       │ →  │  PROCESSED   │ →  │  AGGREGATED     │
+│  PACKETS    │    │   PACKET     │    │   STATISTICS    │
+│             │    │    DATA      │    │                 │
+└─────────────┘    └──────────────┘    └─────────────────┘
+      ↓                    ↓                    ↓
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│ REAL-TIME   │    │  BATCH       │    │  HISTORICAL     │
+│  BUFFERS    │    │  ANALYSIS    │    │   DATA          │
+│ (deque)     │    │   DATA       │    │   STORAGE       │
+└─────────────┘    └──────────────┘    └─────────────────┘
+
+MEMORY MANAGEMENT ARCHITECTURE:
+┌─────────────────────────────────────────────────────────────────┐
+│                    MEMORY OPTIMIZATION LAYER                    │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│  STREAMING      │   CHUNK-BASED   │   SELECTIVE                 │
+│  PROCESSING     │   ANALYSIS      │   DATA                      │
+│                 │                 │   RETENTION                 │
+├─────────────────┼─────────────────┼─────────────────────────────┤
+│ • keep_packets= │ • 5000 packets  │ • Store only                │
+│   False         │   per chunk     │   essential data            │
+│ • use_json=True │ • Parallel      │ • Clear buffers             │
+│ • include_raw=  │   processing    │   periodically              │
+│   False         │ • Memory        │ • Aggregate and             │
+│ • Immediate     │   reclamation   │   discard raw               │
+│   flush         │   after each    │   packets                   │
+│                 │   chunk         │                             │
+└─────────────────┴─────────────────┴─────────────────────────────┘
+
+

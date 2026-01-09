@@ -1,0 +1,32 @@
+MULTI-FORMAT OUTPUT SYSTEM:
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│  ANALYSIS   │ →  │   DATA       │ →  │   OUTPUT        │
+│   RESULTS   │    │  FORMATTER   │    │   RENDERER      │
+│             │    │              │    │                 │
+└─────────────┘    └──────────────┘    └─────────────────┘
+                                      ↓               ↓               ↓
+┌─────────────┐    ┌──────────────┐    ┌─────────────────┐
+│ INTERACTIVE │    │    PDF       │    │   JSON          │
+│ DASHBOARD   │    │   REPORTS    │    │   EXPORT        │
+│ (Plotly)    │    │ (FPDF)       │    │                 │
+└─────────────┘    └──────────────┘    └─────────────────┘
+
+DASHBOARD COMPONENT ARCHITECTURE:
+┌─────────────────────────────────────────────────────────────────┐
+│                    INTERACTIVE DASHBOARD                        │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│   MAIN OVERVIEW │  NETWORK        │   ANOMALY                  │
+│   (2x2 Grid)    │  TOPOLOGY       │   ANALYSIS                 │
+├─────────────────┼─────────────────┼─────────────────────────────┤
+│ • Top Talkers   │ • Device        │ • ML Results               │
+│   Bar Chart     │   Node Graph    │ • Normal vs Anomalous      │
+│ • Protocol      │ • Connection    │ • Anomaly Protocols        │
+│   Distribution  │   Mapping       │ • Risk Assessment          │
+│   Pie Chart     │ • Internal/     │                             │
+│ • Top Ports     │   External      │                             │
+│   Bar Chart     │   Traffic       │                             │
+│ • Packet Size   │ • Geo-location  │                             │
+│   Statistics    │   Visualization │                             │
+└─────────────────┴─────────────────┴─────────────────────────────┘
+
+

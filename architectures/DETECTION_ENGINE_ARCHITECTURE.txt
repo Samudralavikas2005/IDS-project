@@ -1,0 +1,26 @@
+HYBRID DETECTION SYSTEM:
+┌─────────────────────────────────────────────────────────────────┐
+│                    HYBRID DETECTION ENGINE                      │
+├─────────────────┬─────────────────┬─────────────────────────────┤
+│  MACHINE        │  PROTOCOL       │   TRADITIONAL              │
+│  LEARNING       │  DIVERSITY      │   RULE-BASED               │
+│  MODULE         │  ANALYZER       │   DETECTION                │
+├─────────────────┼─────────────────┼─────────────────────────────┤
+│ • Isolation     │ • Monoculture   │ • SYN Flood Detection      │
+│   Forest        │   Detection     │ • Port Scan Detection      │
+│ • Unsupervised  │ • High-Risk     │ • Large Packet Alerts      │
+│   Learning      │   Protocol      │ • Traffic Volume           │
+│ • Feature       │   Alerts        │   Thresholds               │
+│   Extraction    │ • Entropy       │ • Rate-based Rules         │
+│ • Anomaly       │   Calculation   │ • Pattern Matching         │
+│   Scoring       │ • Risk Scoring  │                             │
+└─────────────────┴─────────────────┴─────────────────────────────┘
+                         ↓              ↓              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    ALERT CORRELATION ENGINE                     │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │  ALERT          │  │  SEVERITY       │  │  CONTEXTUAL     │ │
+│  │  AGGREGATION    │  │  CLASSIFICATION │  │  ENRICHMENT     │ │
+│  │                 │  │                 │  │                 │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+└─────────────────────────────────────────────────────────────────┘
